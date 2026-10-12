@@ -14,6 +14,7 @@ const getPath = (startVertex, endVertex) => {
         console.log(startVertex);
         return [startVertex];
     }
+
     const startPosition = new Position(startVertex);
     const endVertexString = convertVertexToString(endVertex);
 
@@ -64,10 +65,10 @@ const getPath = (startVertex, endVertex) => {
         //fragile but holds due to 8x8 board
         const vertex = [+path[i][0], +path[i][2]];
         path[i] = vertex;
-        console.log(vertex);
+        // console.log(vertex);
     }
 
     return path;
 };
 
-knightMoves([0, 0], [3, 3]);
+export {knightMoves};
